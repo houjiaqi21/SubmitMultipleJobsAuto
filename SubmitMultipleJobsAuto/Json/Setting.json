@@ -1,0 +1,27 @@
+{
+  "vs2019_location": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Enterprise\\Common7\\IDE\\devenv.exe",
+  "vs2022_location": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\IDE\\devenv.exe",
+  "scope_project_path": {
+    "0": "C:\\test\\new\\ScopAll_In_One\\ScopAll_In_One.sln",
+    "1": "C:\\test\\new\\DebugFailedVertex\\DebugFailedVertex.sln",
+    "2": "C:\\test\\new\\Parameter\\Parameter.sln",
+    "3": "C:\\test\\new\\FileSetsVertex\\FileSetsVertex.sln",
+    "4": "C:\\test\\new\\ClusterReference\\ClusterReference.sln",
+    "5": "C:\\test\\new\\DebugStream\\DebugStream.sln",
+    "6": "C:\\test\\new\\NAatFirstError\\NAatFirstError.sln"
+  },
+  "script_name": {
+    "0": "Scope19.script",
+    "1": "Scope17.script",
+    "2": "Scope17.script",
+    "3": "Scope.script",
+    "4": "Scope17.script",
+    "5": "1_Write17.script",
+    "6": "Scope.script"
+  },
+  "bits": " Pipelines - Run ScopeStudio-release-20220221.20220414.4 (visualstudio.com)",
+  "testRoundTag": "1",
+  "submit_job_information": {
+    "Nebula Arguents": "-UserDebugStream users/v-hozhao/Debug19_122711.xml -VertexDebugRetainTime 72"
+  }
+}

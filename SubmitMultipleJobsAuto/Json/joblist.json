@@ -1,0 +1,11 @@
+{
+  "0": "ScopAll_In_One",
+  "1": "DebugFailedVertex",
+  "2": "Parameter",
+  "3": "FileSetsVertex",
+  "4": "ClusterReference",
+  "5": "DebugStream",
+  "6": "NAatFirstError",
+
+  "EndFlag": "7"
+}

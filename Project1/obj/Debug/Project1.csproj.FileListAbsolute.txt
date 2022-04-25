@@ -1,0 +1,2 @@
+C:\Users\v-jiaqihou\dev\SubmitMultipleJobsAuto\Project1\obj\Debug\Project1.csprojAssemblyReference.cache
+C:\Users\v-jiaqihou\dev\SubmitMultipleJobsAuto\Project1\obj\Debug\Project1.csproj.CoreCompileInputs.cache

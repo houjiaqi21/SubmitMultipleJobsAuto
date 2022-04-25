@@ -1,0 +1,9 @@
+C:\Users\v-jiaqihou\dev\SubmitMultipleJobsAuto\SubmitMultipleJobsAuto\bin\Release\SubmitMultipleJobsAuto.dll
+C:\Users\v-jiaqihou\dev\SubmitMultipleJobsAuto\SubmitMultipleJobsAuto\bin\Release\SubmitMultipleJobsAuto.pdb
+C:\Users\v-jiaqihou\dev\SubmitMultipleJobsAuto\SubmitMultipleJobsAuto\bin\Release\Newtonsoft.Json.dll
+C:\Users\v-jiaqihou\dev\SubmitMultipleJobsAuto\SubmitMultipleJobsAuto\bin\Release\Newtonsoft.Json.xml
+C:\Users\v-jiaqihou\dev\SubmitMultipleJobsAuto\SubmitMultipleJobsAuto\obj\Release\SubmitMultipleJobsAuto.csprojAssemblyReference.cache
+C:\Users\v-jiaqihou\dev\SubmitMultipleJobsAuto\SubmitMultipleJobsAuto\obj\Release\SubmitMultipleJobsAuto.csproj.CoreCompileInputs.cache
+C:\Users\v-jiaqihou\dev\SubmitMultipleJobsAuto\SubmitMultipleJobsAuto\obj\Release\SubmitMultipleJobsAuto.csproj.CopyComplete
+C:\Users\v-jiaqihou\dev\SubmitMultipleJobsAuto\SubmitMultipleJobsAuto\obj\Release\SubmitMultipleJobsAuto.dll
+C:\Users\v-jiaqihou\dev\SubmitMultipleJobsAuto\SubmitMultipleJobsAuto\obj\Release\SubmitMultipleJobsAuto.pdb
