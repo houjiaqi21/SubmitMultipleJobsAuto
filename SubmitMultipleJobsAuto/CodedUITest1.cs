@@ -243,6 +243,12 @@ namespace SubmitMultipleJobsAuto
             GeneralProcess.CommonDebug();
         }
 
+        [TestMethod]
+        public void DebugLocally_2()
+        {
+            GeneralProcess.OpenInit(2);
+            GeneralProcess.CommonDebug();
+        }
         #region AutoInit
         //[TestMethod]
         //public void AutoInit2()

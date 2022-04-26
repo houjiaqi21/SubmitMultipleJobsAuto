@@ -1,6 +1,7 @@
 {
   "vs2019_location": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Enterprise\\Common7\\IDE\\devenv.exe",
   "vs2022_location": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\IDE\\devenv.exe",
+  "automation_project_path": "C:\\Users\\v-jiaqihou\\dev\\New folder\\SubmitMultipleJobsAuto",
   "scope_project_path": {
     "0": "C:\\test\\new\\ScopAll_In_One\\ScopAll_In_One.sln",
     "1": "C:\\test\\new\\DebugFailedVertex\\DebugFailedVertex.sln",
@@ -20,7 +21,7 @@
     "6": "Scope.script"
   },
   "bits": " Pipelines - Run ScopeStudio-release-20220221.20220414.4 (visualstudio.com)",
-  "testRoundTag": "1",
+  "testRoundTag": "0",
   "submit_job_information": {
     "Nebula Arguents": "-UserDebugStream users/v-hozhao/Debug19_122711.xml -VertexDebugRetainTime 72"
   }

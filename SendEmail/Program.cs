@@ -21,39 +21,23 @@ namespace SendEmail
         {
             string url = "https://prod-16.eastus2.logic.azure.com:443/workflows/28eecf48b48d4616a1045475b0857361/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=AMU8o0R4rVQwmfyNyVZqKtNZEsuPWOI18J-DhN-5UX8";
 
-            //font-family='verdana,arial,sans-serif' color='#333333' border-width='2px' border-collapse='collapse' border-color='#666666'  background-color='#dedede'
             string bits = SubmitMultipleJobsAuto.Json.Readjson("bits", null, "Setting");
-            //string screenFolder = SubmitMultipleJobsAuto.Json.Readjson("bits", null, "screenshotSetting");
-            string help = "<a href = 'https://microsoft.sharepoint.com/teams/CosmosBDP/_layouts/OneNote.aspx?id=%2Fteams%2FCosmosBDP%2FShared%20Documents%2FScopeStudio%2FCosmosTest%2FCOSMOS%20Test%20Team%20DOCS&amp;wd=target%28_Scope%2FScope%20Studio%20Automation.one%7CFF3ABE6A-F992-4789-9CC2-13FD820C980B%2FHow%20to%20check%20the%20Screenshot%7C97B40290-C844-4D29-9D2E-C4D9BE55421E%2F%29'> here </a>";
+            string installationNotes = MailText("InstallationNotes");
             string screenFolder = SubmitMultipleJobsAuto.Json.Readjson("folderName", null, "screenshotSetting");
-            string MailHTMLBodyTital = "<HTML><head><title></title></head> <body style='font-family:Arial,Helvetica,Sans-Serif'>" + 
-                "Hello all，<br/> <br/>below is the information for submitting job on bits：<font color=red>" + bits + "</font><br/><br/>" +
-                "<p><table border='1' cellpadding='5' cellspacing='0' width='100%' bordercolor='#B3B3B3'><tr bgcolor='#dedede'><th>Job Name</th>" +
-                "<th>Script Name</th><th>VS Verson</th><th>Project Name</th><th>VC Name</th><th>Submit Statue</th><th>Submit Link</th></tr><tr>";
-            string MailHTMLBodyEnd = "</table></p><br/><br/>Screenshots about test results are stored in https://devtooltelemetrygen23.blob.core.windows.net/synapseautomation/"
-                + screenFolder + "<br/>You can refer " + help + " to learn how to view screenshots <br/>"
-                //+ "https://microsoft.sharepoint.com/teams/CosmosBDP/_layouts/OneNote.aspx?id=%2Fteams%2FCosmosBDP%2FShared%20Documents%2FScopeStudio%2FCosmosTest%2FCOSMOS%20Test%20Team%20DOCS&wd=target%28_Scope%2FScope%20Studio%20Automation.one%7CFF3ABE6A-F992-4789-9CC2-13FD820C980B%2FHow%20to%20check%20the%20Screenshot%7C97B40290-C844-4D29-9D2E-C4D9BE55421E%2F%29" 
-                + "<br/><br/>Thank you !</HTML>";
+            string testRound = SubmitMultipleJobsAuto.Json.Readjson("testRound", null, "screenshotSetting");
+            string screenFolderPath = "devtooltelemetrygen23.blob.core.windows.net/synapseautomation/";
+            string screenFolderLink = MailText("screenFolderLink_1") + screenFolder + "%2F" + testRound + MailText("screenFolderLink_2");
+
+            string MailHTMLBodyTital = MailText("MailHTMLBodyTital_1") + bits + MailText("MailHTMLBodyTital_2") + MailText("MailHTMLBodyTital_tabletitle");
+            string MailHTMLBodyEnd = MailText("MailHTMLBodyEnd_1") + screenFolderLink + "(<font color=RoyalBlue>" + screenFolderPath + screenFolder + "</font>)" + MailText("MailHTMLBodyEnd_2") + installationNotes + MailText("MailHTMLBodyEnd_3");
 
             string MailHTMLBody = MailHTMLBodyTital;
 
             int flag = 0;
-            
             int infoNum = Convert.ToInt32(SubmitMultipleJobsAuto.Json.Readjson("flag", null, "submittedJobName")); 
             do
             {
-                string jobNameNow = SubmitMultipleJobsAuto.Json.Readjson(flag.ToString(), null, "submittedJobName");
-
-                string jobName = SubmitMultipleJobsAuto.Json.Readjson(jobNameNow, "Job Name", "jobSettingInfo");
-                string scriptName = SubmitMultipleJobsAuto.Json.Readjson(jobNameNow, "Script Name", "jobSettingInfo");
-                string vSVerson = SubmitMultipleJobsAuto.Json.Readjson(jobNameNow, "VS Verson", "jobSettingInfo");
-                string projectName = SubmitMultipleJobsAuto.Json.Readjson(jobNameNow, "Project Name", "jobSettingInfo");
-                string vCName = SubmitMultipleJobsAuto.Json.Readjson(jobNameNow, "VC Name", "jobSettingInfo");
-                string submmitStatus = SubmitMultipleJobsAuto.Json.Readjson(jobNameNow, "Submmit status", "jobSettingInfo");
-                string jobUrl = SubmitMultipleJobsAuto.Json.Readjson(jobNameNow, "Submit link", "jobSettingInfo");
-
-                string info = "<td>" + jobName + "</td><td>" + scriptName + "</td><td>" + vSVerson + "</td><td>" + projectName + 
-                    "</td><td>" + vCName + "</td><td>" + submmitStatus + "</td><td>"+ jobUrl + "</td></tr>";
+                string info = TableContent(flag);
 
                 MailHTMLBody = MailHTMLBody + info;
 
@@ -62,17 +46,15 @@ namespace SendEmail
 
             MailHTMLBody = MailHTMLBody + MailHTMLBodyEnd;
 
-            //string user = "v-jiaqihou@microsoft.com;v-shuaitong@microsoft.com;v-meizhang@microsoft.com;v-qinzhao@microsoft.com;v-yanjing@microsoft.com";
-            string user = "v-jiaqihou@microsoft.com";
+            string user = MailText("users");
+            //string user = "v-jiaqihou@microsoft.com";
             string result = PostUrl(url, 
                 "{\n \"MailBody\": \""+ MailHTMLBody + "\",\n \"Subject\": \"Scope Automation Submmit Information\",\n \"To\": \"" + user + "\",\n \"CC\": \"v-jiaqihou@microsoft.com\",\n \"Attachments\": \"\",\n \"AttachmentName\": \"\"\n}");
 
-            SubmitMultipleJobsAuto.Json.Cleanjson("submittedJobName");
-            SubmitMultipleJobsAuto.Json.Cleanjson("jobSettingInfo");
-            SubmitMultipleJobsAuto.Json.WriterjsonEnd("flag", "0", null, "submittedJobName");
-            SubmitMultipleJobsAuto.Json.Updatejson("0", "testRoundTag", null, null, "Setting");
+            //CleanUp();
 
         }
+
         private static string PostUrl(string url, string postData)
         {
             HttpWebRequest request = null;
@@ -122,9 +104,36 @@ namespace SendEmail
         {
             return true; //总是接受  
         }
+
+        private static string MailText(string tag)
+        {
+            return SubmitMultipleJobsAuto.Json.Readjson(tag, null, "emailconfig");
+        }
+
+        private static void CleanUp()
+        {
+            SubmitMultipleJobsAuto.Json.Cleanjson("submittedJobName");
+            SubmitMultipleJobsAuto.Json.Cleanjson("jobSettingInfo");
+            SubmitMultipleJobsAuto.Json.WriterjsonEnd("flag", "0", null, "submittedJobName");
+            SubmitMultipleJobsAuto.Json.Updatejson("0", "testRoundTag", null, null, "Setting");
+        }
+
+        private static string TableContent(int flag)
+        {
+            string jobNameNow = SubmitMultipleJobsAuto.Json.Readjson(flag.ToString(), null, "submittedJobName");
+
+            string jobName = SubmitMultipleJobsAuto.Json.Readjson(jobNameNow, "Job Name", "jobSettingInfo");
+            string scriptName = SubmitMultipleJobsAuto.Json.Readjson(jobNameNow, "Script Name", "jobSettingInfo");
+            string vSVerson = SubmitMultipleJobsAuto.Json.Readjson(jobNameNow, "VS Verson", "jobSettingInfo");
+            string projectName = SubmitMultipleJobsAuto.Json.Readjson(jobNameNow, "Project Name", "jobSettingInfo");
+            string vCName = SubmitMultipleJobsAuto.Json.Readjson(jobNameNow, "VC Name", "jobSettingInfo");
+            string submmitStatus = SubmitMultipleJobsAuto.Json.Readjson(jobNameNow, "Submmit status", "jobSettingInfo");
+            string jobUrl = SubmitMultipleJobsAuto.Json.Readjson(jobNameNow, "Submit link", "jobSettingInfo");
+
+            string info = "<td>" + jobName + "</td><td>" + scriptName + "</td><td>" + vSVerson + "</td><td>" + projectName +
+                "</td><td>" + vCName + "</td><td>" + submmitStatus + "</td><td>" + jobUrl + "</td></tr>";
+            return info;
+        }
     }
 
-    internal class Mail
-    {
-    }
 }

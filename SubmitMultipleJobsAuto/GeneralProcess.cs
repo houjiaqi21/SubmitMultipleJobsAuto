@@ -84,17 +84,18 @@ namespace SubmitMultipleJobsAuto
 
             Keyboard.SendKeys("{F5}", ModifierKeys.Control);
 
-            int seconds_to_sleep = 20;
-            var wait_time = new TimeSpan(0, 0, 0, seconds_to_sleep);
-            Thread.Sleep(wait_time);
+            //int seconds_to_sleep = 20;
+            //var wait_time = new TimeSpan(0, 0, 0, seconds_to_sleep);
+            //Thread.Sleep(wait_time);
+            Playback.Wait(25000);
 
             WinWindow cmd = Common._window(@"C:\windows\system32\CMD.exe");
-            cmd.DrawHighlight();
+            //cmd.DrawHighlight();
             Mouse.Click(cmd);
             Keyboard.SendKeys("a");
 
             Common.DebugJudgeUntilEnd("_2");
-            ApplicationUnderTest.Launch(@"C:\Users\v-jiaqihou\dev\SubmitMultipleJobsAuto\UploadScreenshot\bin\Release\UploadScreenshot.exe");
+            //ApplicationUnderTest.Launch(Json.Readjson("automation_project_path", null, "Setting") + @"\UploadScreenshot\bin\Release\UploadScreenshot.exe");
 
         }
 

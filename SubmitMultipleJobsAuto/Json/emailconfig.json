@@ -1,0 +1,12 @@
+﻿{
+  "MailHTMLBodyTital_1": "<HTML><head><title></title></head> <body style='font-family:Arial,Helvetica,Sans-Serif'>Hello all，<br/> <br/>below is the information for submitting job on bits：<font color=red>",
+  "MailHTMLBodyTital_2": "</font><br/><br/>",
+  "MailHTMLBodyTital_tabletitle": "<p><table border='1' cellpadding='5' cellspacing='0' width='100%' bordercolor='#B3B3B3'><tr bgcolor='#dedede'><th>Job Name</th><th>Script Name</th><th>VS Verson</th><th>Project Name</th><th>VC Name</th><th>Submit Statue</th><th>Submit Link</th></tr><tr>",
+  "MailHTMLBodyEnd_1": "</table></p><br/><br/>You can find screenshots of test results ",
+  "MailHTMLBodyEnd_2": ", and you can also refer to ",
+  "MailHTMLBodyEnd_3": "to learn how to view them by using <font color=RoyalBlue>Microsoft Azure Storage Explorer</font>.<br/><br/>Thank you !</HTML>",
+  "InstallationNotes": "<a href = 'https://microsoft.sharepoint.com/teams/CosmosBDP/_layouts/OneNote.aspx?id=%2Fteams%2FCosmosBDP%2FShared%20Documents%2FScopeStudio%2FCosmosTest%2FCOSMOS%20Test%20Team%20DOCS&amp;wd=target%28_Scope%2FScope%20Studio%20Automation.one%7CFF3ABE6A-F992-4789-9CC2-13FD820C980B%2FHow%20to%20check%20the%20Screenshot%7C97B40290-C844-4D29-9D2E-C4D9BE55421E%2F%29'> here </a>",
+  "users": "v-jiaqihou@microsoft.com;v-shuaitong@microsoft.com;v-meizhang@microsoft.com;v-qinzhao@microsoft.com;v-yanjing@microsoft.com",
+  "screenFolderLink_1": "<a href = 'https://ms.web.azuresynapse.net/en/authoring/explore/linked/storageaccounts/devtooltelemetrygen23-devtooltelemetrygen23%2Fscopeautomation?subFolderPath=",
+  "screenFolderLink_2": "&workspace=%2Fsubscriptions%2F1bebf60d-8387-4809-8c15-62932373696a%2FresourceGroups%2Ftelemetry-prod-rg%2Fproviders%2FMicrosoft.Synapse%2Fworkspaces%2Ftoolingtelemetryprodworkspace'> here </a>"
+}

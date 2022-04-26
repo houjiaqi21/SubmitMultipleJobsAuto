@@ -894,7 +894,7 @@ namespace SubmitMultipleJobsAuto
             if (resultsView.Exists || ProjectInfo.submitExceptionTag)
             {
                 CommonInit.CaptureImage(ProjectInfo.VsProjectN, ShotName(ProjectInfo.vcFlag) + sceenNum, "Debug");
-                ApplicationUnderTest.Launch(@"C:\Users\v-jiaqihou\dev\SubmitMultipleJobsAuto\UploadScreenshot\bin\Release\UploadScreenshot.exe");
+                ApplicationUnderTest.Launch(Json.Readjson("automation_project_path", null, "Setting") + @"\UploadScreenshot\bin\Release\UploadScreenshot.exe");
 
                 ProjectInfo.submitExceptionTag = false;
                 submitException_thread.Abort();

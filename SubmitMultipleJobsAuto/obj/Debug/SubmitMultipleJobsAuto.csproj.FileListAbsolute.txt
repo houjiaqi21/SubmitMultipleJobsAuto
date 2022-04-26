@@ -7,3 +7,12 @@ C:\Users\v-jiaqihou\dev\SubmitMultipleJobsAuto\SubmitMultipleJobsAuto\obj\Debug\
 C:\Users\v-jiaqihou\dev\SubmitMultipleJobsAuto\SubmitMultipleJobsAuto\obj\Debug\SubmitMultipleJobsAuto.dll
 C:\Users\v-jiaqihou\dev\SubmitMultipleJobsAuto\SubmitMultipleJobsAuto\obj\Debug\SubmitMultipleJobsAuto.pdb
 C:\Users\v-jiaqihou\dev\SubmitMultipleJobsAuto\SubmitMultipleJobsAuto\obj\Debug\SubmitMultipleJobsAuto.csprojAssemblyReference.cache
+C:\Users\v-jiaqihou\dev\New folder\SubmitMultipleJobsAuto\SubmitMultipleJobsAuto\bin\Debug\SubmitMultipleJobsAuto.dll
+C:\Users\v-jiaqihou\dev\New folder\SubmitMultipleJobsAuto\SubmitMultipleJobsAuto\bin\Debug\SubmitMultipleJobsAuto.pdb
+C:\Users\v-jiaqihou\dev\New folder\SubmitMultipleJobsAuto\SubmitMultipleJobsAuto\bin\Debug\Newtonsoft.Json.dll
+C:\Users\v-jiaqihou\dev\New folder\SubmitMultipleJobsAuto\SubmitMultipleJobsAuto\bin\Debug\Newtonsoft.Json.xml
+C:\Users\v-jiaqihou\dev\New folder\SubmitMultipleJobsAuto\SubmitMultipleJobsAuto\obj\Debug\SubmitMultipleJobsAuto.csprojAssemblyReference.cache
+C:\Users\v-jiaqihou\dev\New folder\SubmitMultipleJobsAuto\SubmitMultipleJobsAuto\obj\Debug\SubmitMultipleJobsAuto.csproj.CoreCompileInputs.cache
+C:\Users\v-jiaqihou\dev\New folder\SubmitMultipleJobsAuto\SubmitMultipleJobsAuto\obj\Debug\SubmitMultipleJobsAuto.csproj.CopyComplete
+C:\Users\v-jiaqihou\dev\New folder\SubmitMultipleJobsAuto\SubmitMultipleJobsAuto\obj\Debug\SubmitMultipleJobsAuto.dll
+C:\Users\v-jiaqihou\dev\New folder\SubmitMultipleJobsAuto\SubmitMultipleJobsAuto\obj\Debug\SubmitMultipleJobsAuto.pdb
