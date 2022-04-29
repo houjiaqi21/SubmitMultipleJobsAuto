@@ -81,6 +81,8 @@
     <Folder Include="ResultImage\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Json\debugInfo.json" />
+    <None Include="Json\debugName.json" />
     <None Include="Json\emailconfig.json" />
     <None Include="Json\joblist.json" />
     <None Include="Json\jobSettingInfo.json" />

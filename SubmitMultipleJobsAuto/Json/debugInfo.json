@@ -1,10 +1,7 @@
 {
-  "exclude": [
-    "**/bin",
-    "**/bower_components",
-    "**/jspm_packages",
-    "**/node_modules",
-    "**/obj",
-    "**/platforms"
-  ]
+  "ScopAll_In_One": {
+    "Project Name": "ScopAll_In_One",
+    "Script Name": "Scope19.script",
+    "VS Verson": "2019"
+  }
 }

@@ -95,8 +95,7 @@ namespace SubmitMultipleJobsAuto
             Keyboard.SendKeys("a");
 
             Common.DebugJudgeUntilEnd("_2");
-            //ApplicationUnderTest.Launch(Json.Readjson("automation_project_path", null, "Setting") + @"\UploadScreenshot\bin\Release\UploadScreenshot.exe");
-
+            Common.RecordJobName();
         }
 
         #region instantiate
